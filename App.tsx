@@ -15,11 +15,11 @@ const Portfolio = ()=>{
   return <div>
     <div className="full">
       <div className="rounded-4">
-        <div className="d-flex d-xs-none">
-          <div className="col col-sm-1 pfp rounded-4 d-flex">
+        <div className="">
+          <div className="pfp rounded-4 d-flex">
             <div className="circle"></div>
           </div>
-          <div className="col info rounded-4">
+          <div className="info rounded-4">
             <div className="scroller">
               {p.skills.join(', ')}
               {Array(1).fill(p.projects.at(-1)).map(({name,description})=><div>

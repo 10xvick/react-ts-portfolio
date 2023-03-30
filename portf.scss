@@ -1,48 +1,53 @@
-
-.full{
+$min-width: 550px;
+.full {
   background: linear-gradient(45deg, #2f0073, #d20000);
   width: 100vw;
   height: 100vh;
   padding: 2rem;
-  >div{
-    background-color: rgb(255, 255, 255);
+  > div {
+    background-color: rgba(255, 255, 255, 0.5);
     height: calc(100vh - 4rem);
     width: calc(100vw - 4rem);
-    >div{
-      flex-wrap: wrap;
-      >.pfp{
-        // background-color: rgb(228, 228, 133);
+    > div {
+      display: flex;
+      @media (max-width: $min-width) {
+        display: block;
+      }
+      > .pfp {
+        background: radial-gradient(#d4ba9f, transparent);
         justify-content: center;
         align-items: center;
         padding: 1rem;
         overflow: hidden;
         min-width: calc(200px + 2rem);
-        height: 100%;
-        >.circle{
+        > .circle {
           border-radius: 50%;
           min-width: 200px;
           height: 200px;
-          background: center no-repeat url('https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg');
+          background: center no-repeat
+            url('https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg');
           background-size: 300px;
-          box-shadow:inset 0 1px 20px 1px #dea56f;
+          box-shadow: inset 0 1px 20px 1px #dea56f;
         }
       }
-      >.info{
+      > .info {
         padding: 1rem;
-        width:fit-content;
-        background: red;
-        border-top-left-radius: 0px!important;
-        border-bottom-left-radius: 0px!important;
-        
-        @media (max-width:421px) {
-          border-top-right-radius: 0px!important;
-          border-bottom-left-radius: 0.8rem!important;
+        width: fit-content;
+        background: #ff000034;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        * {
+          color: white;
         }
-        >.scroller{
+        @media (max-width: $min-width) {
+          border-top-right-radius: 0px !important;
+          border-bottom-left-radius: 0.8rem !important;
+        }
+        > .scroller {
           max-height: calc(100vh - 4rem - 2rem);
           min-height: calc(100vh - 4rem - 2rem);
           overflow: auto;
-          @media (max-width:421px) {
+          @media (max-width: $min-width) {
             max-height: calc(100vh - 4rem - 4rem - 200px);
             min-height: calc(100vh - 4rem - 4rem - 200px);
           }
