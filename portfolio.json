@@ -1,0 +1,47 @@
+{
+  "name": "Mr. Cat",
+  "occupation": "Web Developer",
+  "skills": ["React", "JavaScript", "HTML", "CSS"],
+  "projects": [
+    {
+      "name": "E-commerce website",
+      "description": "Built with React, Redux, and Sass. Implemented features such as product filtering, sorting, and pagination. Integrated with a backend API to fetch and display product data. Optimized for performance and accessibility."
+    },
+    {
+      "name": "Recipe app",
+      "description": "Built with React, Firebase, and styled-components. Implemented features such as user authentication, recipe creation and editing, and search functionality. Utilized Firebase Cloud Functions to handle server-side logic. Designed with a mobile-first approach for a seamless user experience on all devices."
+    },
+    {
+      "name": "Portfolio website",
+      "description": "Built with React and CSS modules. Implemented custom animations and transitions for a unique and engaging user experience. Optimized for SEO and accessibility. Responsive design that looks great on all devices."
+    }
+  ],
+  "experience": [
+    {
+      "position": "Web Developer",
+      "company": "ABC Company",
+      "duration": "Jan 2020 - Present",
+      "responsibilities": [
+        "Develop and maintain company websites using React, Node.js, and MongoDB.",
+        "Collaborate with design and marketing teams to implement new features and designs.",
+        "Participate in agile development process and daily stand-up meetings."
+      ]
+    },
+    {
+      "position": "Junior Web Developer",
+      "company": "XYZ Agency",
+      "duration": "Jan 2019 - Dec 2019",
+      "responsibilities": [
+        "Assisted in development of client websites using Angular and Vue.js.",
+        "Worked with senior developers to implement new features and troubleshoot issues.",
+        "Contributed to team code reviews and unit testing."
+      ]
+    }
+  ],
+  "contact": {
+    "email": "mr.cat@example.com",
+    "phone": "555-123-4567",
+    "website": "https://www.example.com",
+    "location": "Anytown, USA"
+  }
+}
