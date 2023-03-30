@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './style.css';
 import './portf.scss';
-import p from './portfolio.json'
+import JsonToText from './components/utility/JsonToText'
 
 export default function App() {
   return (
@@ -21,12 +21,7 @@ const Portfolio = ()=>{
           </div>
           <div className="info rounded-4">
             <div className="scroller">
-              {p.skills.join(', ')}
-              {Array(1).fill(p.projects.at(-1)).map(({name,description})=><div>
-                <div className='fw-bold'>{name}</div>
-                <div>{description}</div>
-              </div>)}
-              
+              <JsonToText/>
             </div>
           </div>
         </div>
