@@ -24,7 +24,7 @@ const Portfolio = ()=>{
           <div className="info rounded-4">
             b
             <div className="scroller">
-              {text.text}
+              {text.name}
             </div>
           </div>
         </div>
