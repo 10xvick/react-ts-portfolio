@@ -3,21 +3,24 @@
   background: linear-gradient(45deg, #2f0073, #d20000);
   width: 100vw;
   height: 100vh;
-  padding-top: 10vh;
-  padding-left: 10vw;
+  padding: 2rem;
   >div{
-    background-color: purple;
-    height: 80vh;
-    width: 80vw;
+    background-color: rgb(255, 255, 255);
+    height: calc(100vh - 4rem);
+    width: calc(100vw - 4rem);
     >div{
       flex-wrap: wrap;
       >.pfp{
-        height: inherit;
+        // background-color: rgb(228, 228, 133);
         justify-content: center;
+        align-items: center;
         padding: 1rem;
+        overflow: hidden;
+        min-width: calc(200px + 2rem);
+        height: 100%;
         >.circle{
           border-radius: 50%;
-          width: 200px;
+          min-width: 200px;
           height: 200px;
           background: center no-repeat url('https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg');
           background-size: 300px;
@@ -25,12 +28,24 @@
         }
       }
       >.info{
-        height: 100%;
-        max-height: 70vh;
-        background-color: red;
+        padding: 1rem;
+        width:fit-content;
+        background: red;
+        border-top-left-radius: 0px!important;
+        border-bottom-left-radius: 0px!important;
+        
+        @media (max-width:421px) {
+          border-top-right-radius: 0px!important;
+          border-bottom-left-radius: 0.8rem!important;
+        }
         >.scroller{
-          overflow-y: scroll;
-          background-color: yellow;
+          max-height: calc(100vh - 4rem - 2rem);
+          min-height: calc(100vh - 4rem - 2rem);
+          overflow: auto;
+          @media (max-width:421px) {
+            max-height: calc(100vh - 4rem - 4rem - 200px);
+            min-height: calc(100vh - 4rem - 4rem - 200px);
+          }
         }
       }
     }

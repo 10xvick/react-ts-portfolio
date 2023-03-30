@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './style.css';
 import './portf.scss';
-import text from './portfolio.json'
+import p from './portfolio.json'
 
 export default function App() {
   return (
@@ -14,17 +14,19 @@ export default function App() {
 const Portfolio = ()=>{
   return <div>
     <div className="full">
-      <div className="bg-light rounded-4">
-        <div className="d-flex">
-          <div className="pfp rounded-4">
-            <div className="circle">
-
-            </div>
+      <div className="rounded-4">
+        <div className="d-flex d-xs-none">
+          <div className="col col-sm-1 pfp rounded-4 d-flex">
+            <div className="circle"></div>
           </div>
-          <div className="info rounded-4">
-            b
+          <div className="col info rounded-4">
             <div className="scroller">
-              {text.name}
+              {p.skills.join(', ')}
+              {Array(1).fill(p.projects.at(-1)).map(({name,description})=><div>
+                <div className='fw-bold'>{name}</div>
+                <div>{description}</div>
+              </div>)}
+              
             </div>
           </div>
         </div>
