@@ -2,9 +2,9 @@ import * as React from 'react';
 import p from '../../assets/json/portfolio.json';
 
 const color = '#ffd3ac';
-function ObjectToArray(obj, level = 1, fs = 7) {
+function ObjectToArray(obj, level = 1, fs = 3) {
   const entries = [];
-  const style = { fontSize: fs / level + 'vw' };
+  const style = { fontSize: fs + fs / level + 'vw' };
   if (typeof obj == 'object') {
     if (Array.isArray(obj)) {
       if (obj.some((e) => typeof e == 'object')) {
